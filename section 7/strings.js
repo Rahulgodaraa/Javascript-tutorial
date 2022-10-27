@@ -65,3 +65,36 @@ const checkbagage = function (items) {
 checkbagage('I have DRUGS in my bags ');
 
 
+//------------------------------------------split
+
+console.log('Rahul Choudahry'.split(' '));
+
+//--------------------------------------------split and join
+const [firstname , Lastname] = 'Rahul Choudahry'.split(' ');
+const newname = ['Mr.' ,  firstname , Lastname].join(' ')
+console.log(newname);
+
+const capitaliznames = function(name) {
+    const names = name.split(' ');
+    const namesupper = [];
+    for (const n of names){
+       namesupper.push( n[0].toUpperCase() + n.slice(1));
+    }
+    console.log(namesupper.join(' '));
+}
+
+capitaliznames('rahul choudhary riya');
+
+
+//------------------------------------------padding a string 
+
+
+const maskcredit = function (number) { 
+      const str = number + '';
+      const laststr = str.slice(-4);
+      return laststr.padStart(str.length, '$');
+};
+
+console.log(maskcredit(26554689658));
+console.log(maskcredit(200000000010000));
+
