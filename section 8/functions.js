@@ -13,3 +13,6 @@ const booking = function (flight = 'AIR INDIA' , numberofpassenger = 4 , place =
 };
 
 booking("EMIRATES");
+
+//---------------------------------Higherorder function 
+
