@@ -49,3 +49,5 @@ greetme('Rameshwar');
 
 const greet = greetingss => names => console.log(`${greetingss} ${names}`);
 greet('rahul' )( 'greet');
+
+//
