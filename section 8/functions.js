@@ -51,3 +51,22 @@ const greet = greetingss => names => console.log(`${greetingss} ${names}`);
 greet('rahul' )( 'greet');
 
 //
+const luftansa = {
+   airline : 'luftansa',
+   iataCode : 'lH',
+   booking : [],
+
+   book(flightNum , name) {
+      console.log(
+         `${name} booked a seat on ${this.airline}
+         flight ${this.iataCode} ${flightNum}`
+      );
+   }
+}
+
+luftansa.book(909 , 'Rahul Choudhary');
+
+const eruuowing = { 
+   name: 'euro',
+   
+}
