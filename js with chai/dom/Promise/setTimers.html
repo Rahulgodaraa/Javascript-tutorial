@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <div>
+        <h1>Promises</h1>
+        <button>Button</button>
+ 
+    </div>
+ 
+    <script>
+        const heading = document.querySelector('h1');
+
+
+const oneSecTimer = function(){
+    heading.innerText ="After One sec"
+    console.log("2sec");
+clearInterval(oneSecTimer,TwoSecTimer)
+
+    
+}
+
+const TwoSecTimer = function(){
+    heading.innerText ="After Two sec"
+    console.log("2sec");
+clearInterval(oneSecTimer,TwoSecTimer)
+
+    
+}
+
+const ThreeSecTimer = function(){
+    heading.innerText ="After Three sec"
+    console.log('3sec');
+
+
+} 
+ 
+
+
+// setInterval(oneSecTimer ,1000);
+// setInterval(TwoSecTimer , 3000);
+// setInterval(ThreeSecTimer , 5000);
+
+    </script>
+</body>
+
+</html>

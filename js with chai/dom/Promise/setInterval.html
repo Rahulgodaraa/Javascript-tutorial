@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .parent{
+        margin-top: 100px ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: blueviolet;
+        color: aliceblue;
+        height: 500px;
+        flex-direction: column;
+    }
+    .text-box{
+        width: 100%;
+        height: 50%;
+        background-color: rgb(189, 156, 219);
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid white;
+
+    }
+
+    .button-box{
+        width: 100%;
+        height: 30%;
+        background-color: rgb(189, 156, 219);
+        color: black;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: 3px solid white;
+
+    }
+
+    .button-box > button{
+        padding: 20px;
+        background-color: blueviolet;
+        color: aliceblue;
+        font-size: 20px;
+        font-weight: 700;
+        border: 2px solid white;
+        border-radius: 100%;
+    }
+</style>
+
+
+
+<body>
+
+    <div class="parent">
+        <div class="box">
+            <div class="text-box">
+              <h1>Hello</h1>
+            </div>
+            <div class="button-box">
+                <button id="start">Start</button>
+                <button id="e">Stop</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const headingTexts = document.querySelector('h1');
+        const startButton = document.getElementById("start");
+        const endButton = document.getElementById('e');
+    let interval ;
+    let count = 0 ;
+    const startFunction = function(){
+      interval = setInterval(function(){
+        count++;
+        headingTexts.innerText = "Timer has started"
+        console.log("setinterval has started" , count)
+     },1000)
+     
+    }
+
+
+    
+    const endFunction = function(){
+        clearInterval(interval);
+        headingTexts.innerText = `Interval has stopped and exceuted ${count} , times`
+    }
+    
+    
+        startButton.addEventListener("click", startFunction)
+        endButton.addEventListener("click", endFunction)
+
+     
+    
+    
+    
+    
+    </script>
+    
+    
+</body>
+
+
+</html>
